@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Asosiy sahifa uchun umumiy stil */
+  body {
+      font-family: "Poppins", sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .error {
+      text-align: center;
+      font-size: 90px;
+    color: #ff7043;
+    }
+    
+    /* Sarlavha */
+    h2 {
+      text-align: center;
+      color: #ff7043;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+    
+    /* Kategoriyalar ro‘yxati */
+    .list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    
+    /* Har bir kategoriya */
+    .meal {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    
+    /* Hover effekti */
+    .meal:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Rasm */
+    .categories__img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    
+    /* Kategoriya nomi */
+    .categories__title {
+      font-size: 1.4rem;
+      color: #333;
+      margin: 15px;
+    }
+    
+    /* Kategoriya tavsifi */
+    .categories__description {
+      font-size: 0.95rem;
+      color: #666;
+      margin: 0 15px 20px 15px;
+      line-height: 1.5;
+    }
+    
+    /* Responsive (kichik ekranlar uchun) */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+    
+      .categories__title {
+        font-size: 1.2rem;
+      }
+    
+      .categories__description {
+        font-size: 0.9rem;
+      }
+    }
+    

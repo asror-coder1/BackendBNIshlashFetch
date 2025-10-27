@@ -18,12 +18,12 @@ function renderCatigories(arr, parent) {
   let filteredArr = arr.filter((el) => {
     return el.strCategory !== "Pork";
   });
-  
+
   filteredArr.forEach((el) => {
     parent.insertAdjacentHTML(
       "beforeend",
       `
-      <li class="category">
+    <a href="./meals.html?c=${el.strCategory}">  <li class="category">
         <img src="${el.strCategoryThumb}" alt="${
         el.strCategory
       }" class="categories__img" />
@@ -35,7 +35,7 @@ function renderCatigories(arr, parent) {
               : el.strCategoryDescription.substring(0, 100) + "..."
           }
         </p>
-      </li>
+      </li></a>
       `
     );
   });
